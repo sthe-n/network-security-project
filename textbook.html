@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ textbook.title }} - NetworkingHub</title>
-    <link rel="stylesheet" href="style.css">
+    <title>StudyHub - Intro to Network Security download</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
@@ -22,7 +22,7 @@
             <div class="textbook-grid">
                 <div class="textbook-cover">
                     <div class="textbook-image">
-                        <img src="textbook.png">
+                        <img src="{{ url_for('static', filename='images/textbook.png') }}">
                     </div>
                     <div class="book-cover"></div>
                 </div>
@@ -97,6 +97,6 @@ By the end of the textbook, learners will have a solid understanding of the netw
             return confirm('⚠️ You are about to download a file. This is an educational simulation that demonstrates how malware can be disguised as legitimate downloads.\n\nContinue?');
         }
     </script>
-    <script src="script.js "></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
