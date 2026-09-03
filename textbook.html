@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ textbook.title }} - NetworkingHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="textbook-header">
+            <a href="/" class="logo-link">
+                <h1 class="logo">📚 StudyHub</h1>
+            </a>
+            <nav class="header-nav">
+                <a href="/">Home</a>
+                <a href="/search?q=Computer Networks">Browse</a>
+            </nav>
+        </header>
+        
+        <main class="textbook-main">
+            <div class="textbook-grid">
+                <div class="textbook-cover">
+                    <div class="textbook-image">
+                        <img src="textbook.png">
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+                
+                <div class="textbook-details">
+                    <h1>Introduction to Network Security</h1>
+                    <p class="authors-list">
+                        by M.S Ntshangase, K Radebe, L Ntshangase
+                    </p>
+                    <p class="edition-info">14th Edition | Network Security</p>
+                    
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.6</span>
+                        <span class="review-count">(6 reviews)</span>
+                    </div>
+                    
+                    <p class="price">Free Download Below</p>
+                    
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p>
+
+*Introduction to Network Security* provides a practical and accessible foundation in the principles, technologies, and practices used to protect modern computer networks. The textbook introduces key concepts such as confidentiality, integrity, availability, authentication, access control, encryption, firewalls, intrusion detection, malware, secure network design, and risk management.
+
+Designed for students and beginners in Information Technology and Cybersecurity, the book combines theoretical concepts with real-world examples and practical scenarios. Readers will learn how network attacks occur, how vulnerabilities can be identified, and how security controls can be implemented to protect systems, users, and data.
+
+By the end of the textbook, learners will have a solid understanding of the network security landscape and the fundamental skills needed to design, evaluate, and maintain more secure networks.
+</p>
+                    </div>
+                    
+                    <div class="download-section">
+                        <p class="file-info">📄 PDF | 12.4 MB | 4th Edition</p>
+                        <a  class="download-button" id=downloadpdf onclick="return confirmDownload()">
+                            📥 Download Textbook (PDF)
+                        </a>
+                        <p class="download-note">Secure download from verified source</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reviews-section">
+                <h3>What students are saying</h3>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer">ComputerScienceStudent</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p>"Excellent textbook! Clear explanations and great examples."</p>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer">NetworkingPro</span>
+                        <span class="review-stars">★★★★☆</span>
+                    </div>
+                    <p>"Very comprehensive coverage of networking fundamentals."</p>
+                </div>
+            </div>
+            
+            <div class="simulation-notice">
+                ⚠️ This is an educational simulation. The "Download" button downloads a harmless awareness program.
+            </div>
+        </main>
+        
+        <footer>
+            <p>This is an educational simulation for cybersecurity awareness</p>
+        </footer>
+    </div>
+    
+    <script>
+        function confirmDownload() {
+            return confirm('⚠️ You are about to download a file. This is an educational simulation that demonstrates how malware can be disguised as legitimate downloads.\n\nContinue?');
+        }
+    </script>
+    <script src="script.js "></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - AcademicSearch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo-link">
+                <h1 class="logo">📚Searchly</h1>
+            </a>
+            <form class="search-form-small" action="/search" method="GET">
+                <input type="text" name="q" class="search-input-small" value="{{ query }}" required>
+                <button type="submit" class="search-button-small">Search</button>
+            </form>
+        </header>
+        
+        <main class="search-results">
+            <p class="result-count">About 4 results for "<strong>{{ query }}</strong>"</p>
+            
+            {% for result in results %}
+            <div class="result-item">
+                <h3>
+                    {% if loop.index == 3 %}
+                        <a href="/textbook">{{ result.title }}</a>
+                        <span class="simulation-badge">Educational Simulation</span>
+                    {% else %}
+                        <a href="#">{{ result.title }}</a>
+                    {% endif %}
+                </h3>
+                <p class="result-url">{{ result.url }}</p>
+                <p class="result-description">{{ result.description }}</p>
+            </div>
+            {% endfor %}
+            
+            <div class="simulation-notice">
+                ⚠️ This is a controlled educational simulation. No actual malware is present.
+            </div>
+        </main>
+        
+        <footer>
+            <p>This is an educational simulation for cybersecurity awareness</p>
+        </footer>
+    </div>
+</body>
+</html>
